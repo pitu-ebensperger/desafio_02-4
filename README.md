@@ -1,5 +1,3 @@
-# desafio_02-4
+# Desafío 3 - Electric Car Store**
  
-CSS Avanzado (G90)
-**Desafío 3 - Electric Car Store
-**
+Curso CSS Avanzado (G90) - Módulo 4 Media Queries
