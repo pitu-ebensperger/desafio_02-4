@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Electric Car</title>
+    <title>Curology</title>
     
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
@@ -17,18 +17,27 @@
     <div class="grid-container">
 <!-- NAVBAR -->
         <div class="navbar"> 
-            <div class="brand">Electric Car</div>
+            <div class="brand">Curology</div>
             <div><i class="fa-solid fa-bars"></i></div>
         </div>
 
 <!-- MAIN -->
-        <div class="filter"> Ordenar por </div>  
+        <div class="filter">
+            <p>Ordernar por:</p>
+            <select class="form-select" aria-label="select">
+                <option selected value="0">Price</option>
+                <option value="1">Recommended</option>
+                <option value="2">Most Sold</option>
+                <option value="3">All</option>
+              </select>
+        </div>  
         <div class="main">
 
             <div class="card">
                 <img src="/assets/img/prod1.jpg" class="card-img-top" alt="Product 1">
                 <div class="card-body">
                   <p class="card-text">Body Cream</p>
+                  <a href="#" class="btn btn-primary">Ver más</a>
                 </div>
               </div>
 
@@ -57,8 +66,8 @@
         <div class="footer"> 
             <span>
                 <i class="fa-brands fa-facebook"></i><span>&nbsp</span>
-                <i class="fa-brands fa-facebook"></i></span>
-            <p>Todos los derechos reservados</p>
+                <i class="fa-brands fa-instagram"></i></span>
+            <p>All rights reserved</p>
         </div>
     </div>
     

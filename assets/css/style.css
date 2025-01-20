@@ -6,11 +6,13 @@
 /* ESTILO GENERAL */
 
 
+/* NAVEGACION ------------------ */
+
 .navbar,.sidebar{
     grid-area: nav;
     display: flex;
     justify-content: space-between;
-    background:#607d8b;
+    background:#382c52;
     color: #f5f7f8;
     margin: 0;
     padding: 10px;
@@ -23,6 +25,9 @@
     justify-content: flex-start;
     width: 80%;
 }
+
+/* MAIN ------------------ */
+
 .main {
     grid-area: main;
     display: flex;
@@ -41,25 +46,70 @@
     align-items: center;
     padding: 10px;
     flex-direction: column;
-    background: #e3edf1;
-    color:#607d8b;
+    background:#e3deed;  
+    color:#6d5e8e;    
+}
 
+select{
+    border-radius: 20px;
+    padding: 3px 15px;
+    border: 1px solid #6d5e8e9a;
+    background:#e3deed;  
 }
   
+
 .pagination>li>a{
-    color: #273137;
-    background: #dfe5e8;
-    border:none;
+    color: #6d5e8e;
+    background: #e3deed;
     font-weight: 400;
 }
 
 .pagination>li>a:focus, .pagination>li>a:hover, .pagination>li>span:focus, .pagination>li>span:hover {
     z-index: 2;
-    color: #303e45;
-    background-color: #becbd2;
+    color: #e3deed;
+    background-color: #6d5e8e;
     border-color: #ddd;
     font-weight: 600;
 }
+
+.card{
+    max-width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+}
+
+    .card-img-top{
+        max-width: 100%;
+        border-radius: 20px 20px 0 0;
+    }
+
+    .card-body{
+        max-width: 80%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: #382c52;
+        font-size: 20px;
+        row-gap: 10px;
+        padding: 30px;
+    }
+
+.btn-primary{
+    background:#382c52;
+    border-radius: 20px;
+    border:none;
+    padding: 5px 30px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+/* FOOTER ------------------ */
 .footer{
     grid-area: footer;
     display: flex;
@@ -67,61 +117,39 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    background: #f5f7f8;
-    color: #7d97a5;
+    background: #e3deed;
+    color: #382c52;
     padding: 15px;
     min-height: 60px;
    
 }
 
 
-.card-img-top{
-    max-width: 100%;
-    border-radius: 20px 20px 0 0;
-}
-.card{
-    max-width: 80%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-size: 16px;
-    row-gap: 10px;
-    padding-bottom: 10px;
-    border-radius: 20px;
-    background: #f5f7f8;
 
 
-}
-/*
-header {
-    grid-area: header;
-  }
-  
-  aside {
-    grid-area: sidebar;
-  }
-  
-  */
 
-/* DISPOSITIVO LARGE */
+/* DISPOSITIVO LARGE ------------------------------------------------------ */
 @media (min-width: 576px) {
 
     .grid-container {
         display: grid;
         grid-template-columns: 20% 80%;
         grid-template-areas: 
-        "header header"
+        "nav filter"
         "nav main"
-        "footer footer";
+        "footer main";
         ;
       }
-
+    
+      .navbar{
+        border-radius: 0;
+      }
 
 }
 
 
 
-/* DISPOSITIVO MED-SMALL */
+/* DISPOSITIVO SMALL ------------------------------------------------------ */
 @media (max-width: 576px) {
 
     .grid-container {
