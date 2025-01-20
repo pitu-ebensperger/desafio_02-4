@@ -8,16 +8,42 @@
 
 /* NAVEGACION ------------------ */
 
-.navbar,.sidebar{
+.navigation{
     grid-area: nav;
     display: flex;
+    flex-direction: column;
+    background:#382c52;
+    color: #f5f7f8;
+    margin: 0;
+    padding: 10px;
+    width: 100%;
+}
+
+.navbar{
+    display: flex;
+    flex-direction: row;
     justify-content: space-between;
     background:#382c52;
     color: #f5f7f8;
     margin: 0;
     padding: 10px;
-    font-size: 20px;
+    font-size: 24px;
     width: 100%;
+}
+
+.menu{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-size: 18px;
+    padding: 20px 0;
+    font-weight: 300;
+    row-gap: 10px;
+}
+
+.navigation > .navbar > a, .navigation > .menu > a{
+    color: #e3deed;
 }
 
 .brand{
@@ -44,12 +70,16 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 10px;
+    padding: 15px;
     flex-direction: column;
     background:#e3deed;  
     color:#6d5e8e;    
 }
 
+    .filter>span{
+        font-size: 16px;
+        padding-bottom: 5px;
+    }
 select{
     border-radius: 20px;
     padding: 3px 15px;
@@ -57,23 +87,20 @@ select{
     background:#e3deed;  
 }
   
-
-.pagination>li>a{
-    color: #6d5e8e;
-    background: #e3deed;
-    font-weight: 400;
-}
-
-.pagination>li>a:focus, .pagination>li>a:hover, .pagination>li>span:focus, .pagination>li>span:hover {
-    z-index: 2;
-    color: #e3deed;
-    background-color: #6d5e8e;
-    border-color: #ddd;
-    font-weight: 600;
+.product-grid{
+    display: grid;
+    justify-items: center;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    row-gap: 25px;
+    padding: 20px;
 }
 
 .card{
     max-width: 80%;
+    width: 400px;
+    height: 550px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -82,7 +109,9 @@ select{
 }
 
     .card-img-top{
-        max-width: 100%;
+        width: 100%;
+        max-height: 75%;
+        object-fit: cover;
         border-radius: 20px 20px 0 0;
     }
 
@@ -107,6 +136,21 @@ select{
     letter-spacing: 2px;
     font-size: 12px;
     font-weight: 400;
+}
+
+
+.pagination>li>a{
+    color: #6d5e8e;
+    background: #e3deed;
+    font-weight: 400;
+}
+
+.pagination>li>a:focus, .pagination>li>a:hover, .pagination>li>span:focus, .pagination>li>span:hover {
+    z-index: 2;
+    color: #e3deed;
+    background-color: #6d5e8e;
+    border-color: #ddd;
+    font-weight: 600;
 }
 
 /* FOOTER ------------------ */
@@ -141,8 +185,15 @@ select{
         ;
       }
     
+      .product-grid{
+        grid-template-columns: repeat(4, 1fr);
+    }
       .navbar{
         border-radius: 0;
+      }
+
+      .card-body{
+        padding: 20px 0;
       }
 
 }
@@ -161,4 +212,12 @@ select{
         "main"
         "footer";
       }
+
+      .product-grid{
+        grid-template-columns: 1fr;
+    }
+
+    .menu {
+        display: none;
+    }
 }
