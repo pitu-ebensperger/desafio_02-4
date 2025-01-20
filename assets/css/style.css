@@ -95,8 +95,7 @@ select{
     overflow: hidden;
     row-gap: 25px;
     padding: 20px;
-    max-width: 100%;
-    max-width: 100%;
+    min-width: 100%;
 }
 
 .card{
@@ -177,7 +176,7 @@ select{
 
     .grid-container {
         display: grid;
-        grid-template-columns: 15% 85%;
+        grid-template-columns: 1fr 82%;
         grid-template-areas: 
         "nav filter"
         "nav main"
@@ -206,6 +205,10 @@ select{
       .product-grid{
         grid-template-columns: repeat(4, 1fr);
         margin: 20px;
+        max-width: 100%;
+       overflow-x: scroll;
+       column-gap: 20px;
+       justify-content: flex-start;
     }
       .navbar{
         border-radius: 0;
@@ -213,17 +216,21 @@ select{
 
       .card-body{
         padding: 20px 0;
+        font-size: 18px;
       }
 
       .card{
-        width: 250px;
+        width: 100%;
+        min-width: 170px;
       }
 
       .card-img-top{
         width: 100%;
         max-height: 200px;
       }
-
+      .btn-primary{
+        padding: 5px 10px;
+    }
 }
 
 
@@ -243,6 +250,7 @@ select{
 
       .product-grid{
         grid-template-columns: 1fr;
+        height: 590px;
     }
 
     .menu {
@@ -250,7 +258,7 @@ select{
     }
 
     .card{
-        max-width: 80%;
+        max-width: 100%;
         width: 400px;
         height: 550px;
         }
