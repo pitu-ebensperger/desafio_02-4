@@ -1,12 +1,12 @@
-*{
-    margin: 0;
-    padding: 0;
+*,*:before, *:after {
+  margin: 0;
+  padding: 0;
 }
 
 /* ESTILO GENERAL */
 
 
-/* NAVEGACION ------------------ */
+/* NAVEGACION  ------------------------------------------------------------------------------------------------------------ */
 
 .navigation{
     grid-area: nav;
@@ -52,7 +52,7 @@
     width: 80%;
 }
 
-/* MAIN ------------------ */
+/* MAIN ------------------------------------------------------------------------------------------------------------ */
 
 .main {
     grid-area: main;
@@ -86,7 +86,8 @@ select{
     border: 1px solid #6d5e8e9a;
     background:#e3deed;  
 }
-  
+
+
 .product-grid{
     display: grid;
     justify-items: center;
@@ -98,6 +99,7 @@ select{
     min-width: 100%;
 }
 
+/* CARDS */
 .card{
     max-width: 80%;
     display: flex;
@@ -106,7 +108,6 @@ select{
     border-radius: 20px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
 }
-
     .card-img-top{
         width: 100%;
         max-height: 75%;
@@ -126,6 +127,7 @@ select{
         padding: 30px;
     }
 
+/* BUTTONS */
 .btn-primary{
     background:#382c52;
     border-radius: 20px;
@@ -137,7 +139,7 @@ select{
     font-weight: 400;
 }
 
-
+/* PAGINATION */
 .pagination>li>a{
     color: #6d5e8e;
     background: #e3deed;
@@ -152,7 +154,7 @@ select{
     font-weight: 600;
 }
 
-/* FOOTER ------------------ */
+/* FOOTER  ------------------------------------------------------------------------------------------------------------ */
 .footer{
     grid-area: footer;
     display: flex;
@@ -170,8 +172,9 @@ select{
 
 
 
+/* MEDIA QUERIES  ------------------------------------------------------------------------------------------------------------ */
 
-/* DISPOSITIVO LARGE ------------------------------------------------------ */
+/*  XL - L - M */
 @media (min-width: 576px) {
 
     .grid-container {
@@ -233,9 +236,7 @@ select{
     }
 }
 
-
-
-/* DISPOSITIVO SMALL ------------------------------------------------------ */
+/* S - XS */
 @media (max-width: 576px) {
 
     .grid-container {
